@@ -63,6 +63,26 @@ header nav ul li a {
     background: #fff;
     text-align: center;
 }
+/* Horizontal List Styles */
+.horizontal-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.horizontal-list li {
+    margin: 0 15px;
+}
+
+.horizontal-list li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.horizontal-list li a:hover {
+    text-decoration: underline;
+}
 
 /* Footer Styles */
 footer {
