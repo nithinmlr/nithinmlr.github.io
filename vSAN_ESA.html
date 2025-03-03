@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VMware</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="include.js" defer></script>
+</head>
+<body>
+    <div data-include="header.html"></div>
+    <h2>VSAN ESA notes</h2>
+    <p>Welcome to the VSAN ESA notes page. Here you will find information and resources related to VMware & VSAN.</p>
+    <article>
+        <h3>What is express storage architecture?</h3>
+        <p>From VSAN 8 onwards support for an all NVMe Express storage architecture is introduced</p>
+    </article>
+    <article>
+        <h3>Recommedations and maximum supported configurations discused in points below</h3>
+        <p>1. VSAN ESA with 8 update 2 supports upto 500 virtual machienes per host</p>
+        <p>2. Maximum VMDK supported is 62TB</p>
+        <p>3. ESA having the objects categorized as capacity and performance leg.The number of components are determined
+            by the storage policy.If the storage policy is set to FTT=1 & RAID-5 the number of components would be two for performance leg and 5 for capacity leg.</p>
+        </p>
+        <p>4. VMDKs are thinly provisioned by default</p>
+        <p>5. The other point to consider about the Physical switches,25Gbps is recommended for VSAN. Also consider other factors such as back plane bandwidth,port buffering available,ASICS for keeping "packets per second",deep switch buffers etc</p> 
+        <p>6. Network IO control on the DVswitch level to prioritize the VSAN traffic</p>
+        <p>7. The other point to consider is the MTU size, 9000 is recommended</p>
+        <p>8. Multiple VMKernel ports for VSAN can be used but not supported with datastore sharing,VSAN MAX and stretched clusters</p>
+        <p>9. Uplink configuration is recommended with vSAN as active and vMotion as standby and vice versa</p>
+        <p>10. JUMBO frames as supported and use it wherever its enabled on the upstream switch level.Gains are minimal because vSphere already uses TSO and LRO</p>
+        <p>11. vSAN Express Storage Architecture uses storage pools</p>
+        <p>12. vSAN ESA the combination of performance and capacity leg removes the need for Witness component</p>
+        <p>13. Operational Reserve(OR)- reserve for cluster internal operations and Host build reserve(HBR)- Host failure reserve </p>
+        <p>14. VM component protection can be enabled ability to respond to APD or PDL events. vSphere HA uses VSAN network for the HA to communicate. Isolation address can be of VSAN g/w and is set using das.isolationAddress.HA not to use management network using settings das.useDefaultIsolationAddress=false .Isolation address consider using SVI(switch virtual Interface) on the VSAN subnet.</p>
+        <a href="vSAN_ESA.html"></a>
+
+
+    <div data-include="footer.html"></div>
+</body>
+</html>

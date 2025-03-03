@@ -5,39 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VMware</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="include.js" defer></script>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="vmware.html">VMware</a></li>
-                <li><a href="azure.html">Azure</a></li>
-                <li><a href="powercli.html">PowerCLI</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div data-include="header.html"></div>
 
     <section id="vmware">
-        <h2>VMware</h2>
-        <p>Welcome to the VMware subpage. Here you will find information and resources related to VMware.</p>
-        
-        <h3>Sample Code</h3>
-        <pre>
-<code>
-// Sample VMware Code
-public class VMwareSample {
-    public static void main(String[] args) {
-        System.out.println("Hello, VMware!");
-    }
-}
-</code>
-        </pre>
+        <h2>VMware Cloud Foundation</h2>
+        <p>Welcome to the VCF Page. Here you will find information and resources related to VMware & VCF.</p>
+        <article>
+            <h3><a href="vSAN_ESA.html" style="text-decoration: none;">VSAN ESA notes</a></h3>
+            <p>Here we will discuss about the ESA aka Express storage architecture...</p>
+            <a href="vSAN_ESA.html">Continue Reading</a>
+        </article>
+
+        <article>
+            <h3>Blog Post Title 2</h3>
+            <p>Summary of the second blog post...</p>
+            <a href="blog2.html">Continue Reading</a>
+        </article>
+
+        <article>
+            <h3>Blog Post Title 3</h3>
+            <p>Summary of the third blog post...</p>
+            <a href="blog3.html">Continue Reading</a>
+        </article>
     </section>
 
-    <footer>
-        <p>&copy; 2025 NJ`s Blog. All rights reserved.</p>
-    </footer>
+    <div data-include="footer.html"></div>
 </body>
 </html>
