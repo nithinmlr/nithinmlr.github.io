@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="include.js" defer></script>
+</head>
+<body>
+    <div data-include="header.html"></div>
+    <h2>Day with Certificate for IIS</h2>
+    <p>Some steps around the certificate replacement</p>
+   
+    <article>
+       <p>https://woshub.com/install-ssl-certificate-iis-windows/</p>
+        <p>The above link has saved the day during the certificate replacement</p>
+        <p>1. Install OpenSSL generate the certificate signing request(CSR).There would be two files generated one with the CSR and other with the key</p>
+        </p>
+        <p>2. Send the CSR to the Certificate signing authority either to the Microsoft CA or to the External certificate provider</p>
+        <p>3. Once get the certificate convert it to the pfx file using the key with the command "openssl pkcs12 -export -out target.pfx -inkey source.key -in source.crt"</p> 
+
+        <p>6. In this case certificate was from non Microsoft CA</p>
+        <p>7. Import the certificate to the IIS</p>
+        <p>8. Bind the certificate to the website</p>
+        <p>9. Restart the IIS</p>
+        <p>10. Check the certificate in the browser</p>
+        <p>11. Check the certificate in the IIS</p>
+        <p>12. Check the certificate in the MMC</p>
+        <p>13. Check the certificate in the Certificate store</p>
+        <a href="Azure.html"></a>
+
+
+    <div data-include="footer.html"></div>
+</body>
+</html>
