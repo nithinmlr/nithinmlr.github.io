@@ -19,8 +19,10 @@
         <h3>Recommedations and maximum supported configurations discused in points below</h3>
         <p>1. VSAN ESA with 8 update 2 supports upto 500 virtual machienes per host</p>
         <p>2. Maximum VMDK supported is 62TB</p>
-        <p>3. ESA having the objects categorized as capacity and performance leg.The number of components are determined
-            by the storage policy.If the storage policy is set to FTT=1 & RAID-5 the number of components would be two for performance leg and 5 for capacity leg.</p>
+        <p>3. ESA having the objects categorized as capacity and performance leg. The number of components are determined
+            by the storage policy. If the storage policy is set to FTT=1 & RAID-5 the number of components would be two for performance leg and 5 for capacity leg.
+            You can understand more about the difference and good explanation in this blog
+            <a href="https://www.yellow-bricks.com/2022/11/29/vsan-8-0-esa-dude-where-my-vsan-disk-group/" target="_blank">Click to read more</a>
         </p>
         <p>4. VMDKs are thinly provisioned by default</p>
         <p>5. The other point to consider about the Physical switches,25Gbps is recommended for VSAN. Also consider other factors such as back plane bandwidth,port buffering available,ASICS for keeping "packets per second",deep switch buffers etc</p> 
