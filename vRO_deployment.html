@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VMware</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="include.js" defer></script>
+</head>
+<body>
+    <div data-include="header.html"></div>
+    <h2>VRO deployment guide for 8.18.1 for Standalone VRO</h2>
+    <p>This will guide you through the VRO deployment and intiial setup</p>
+    <article>
+        <h3>Deployment Part use the below link for the initial deployment </h3>
+        <p> Notes: Ensure the DNS both forward and reverse is working and the domain Names,Hostname(Full FQDN) are provided during the deployment</p>
+        <a href="https://cloudblogger.co.in/2025/03/21/setting-up-authentication-in-vcf-orchestrator-with-no-control-center/" target="_blank">Click here to deploy VRO</a>
+    </article>
+    <article>
+        <h3>Post deployment follow the below article to setup the authentication provider</h3>
+        <p>Post first boot verify the VRO services using the kubectl -n prelude get pods as well as vracli vco service status commands</p>
+        <p>setup the authentication using the below link</p>
+        <a href="https://knowledge.broadcom.com/external/article/383139/how-to-configure-the-automation-orchestr.html" target="_blank">Click here to setup vSphere authentication</a>
+        <p>Once it is setup and validated run the below command to enable the basic authentication
+            "vracli vro properties set -k com.vmware.o11n.sso.basic-authentication.enabled -v true"
+        </p>
+        <a href="https://knowledge.broadcom.com/external/article/322715/error-cannot-complete-login-due-to-an-i.html" target="_blank">Click here for more details</a>
+    </article>
+    <div data-include="footer.html"></div>
+</body>
+</html>
